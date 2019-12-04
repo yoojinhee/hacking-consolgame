@@ -1,0 +1,4 @@
+﻿  Choice.cpp
+c:\users\유진희\desktop\game_project\game_project\choice.cpp(133): warning C4715: 'keycontrol': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\유진희\desktop\game_project\game_project\choice.cpp(180): warning C4715: 'intro_change': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  game_project.vcxproj -> C:\Users\유진희\Desktop\game_project\x64\Debug\game_project.exe
