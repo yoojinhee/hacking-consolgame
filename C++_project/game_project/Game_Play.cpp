@@ -3,7 +3,6 @@
 #include<iostream>
 using namespace std;
 //int a = 6, b = 2;//¼ıÀÚ ÁÂÇ¥
-
 const char *num1[9][5][4] =
 {
 	{
