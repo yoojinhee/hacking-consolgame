@@ -3,6 +3,7 @@
 #include<iostream>
 using namespace std;
 //int a = 6, b = 2;//숫자 좌표
+
 const char *num1[9][5][4] =
 {
 	{
@@ -505,6 +506,8 @@ void Game_Play::ending1()
 		cout << "호걸 : 다음에도 부탁하면 꼭 자네가 도와주길 바라네 하하하하!!" << endl;
 	}
 	if (key = _getch()) {
+		writereview();
+
 		title();
 		title_menuchoice();
 	}
@@ -526,6 +529,7 @@ void Game_Play::ending2()
 		cout << "호걸 : 다신 자네에게 도움을 바라고 싶지 않구만.." << endl;
 	}
 	if (key = _getch()) {
+		writereview();
 		title();
 		title_menuchoice();
 	}
@@ -543,10 +547,31 @@ void Game_Play::ending3()
 		cout << "호걸 : 다신 얼씬 거리지 말게 ㅉㅉ" << endl;
 	}
 	if (key = _getch()) {
+		writereview();
 		title();
 		title_menuchoice();
 	}
 }
 //게임 엔딩3
+void Game_Play::writereview() {
 
+	system("cls");
+	int key = 0;
+	gotoxy(15, 13);
+	cout << "게임 개발자에게 남기는 한마디 : ";
+	FILE* review;
+	fopen_s(&review, "review.txt", "w");
+	string write;
+	getline(cin, write);
+	char *c = new char[write.length() + 1];
+	strcpy(c, write.c_str());
+	fputs(c, review);
+	delete[] c;
+	fclose(review);
+	//gotoxy(20, 37);
+
+	//readreview();
+
+	//return name;
+}
 

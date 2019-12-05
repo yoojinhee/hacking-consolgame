@@ -1,5 +1,7 @@
 #ifndef GAME_PLAY_H
 #define GAME_PLAY_H
+#define _CRT_SECURE_NO_WARNINGS
+
 #include"Common.h"
 
 #include<iostream>
@@ -22,6 +24,7 @@ public:
 	void ending2();
 	void ending3();
 	void game_screen1();
+	void writereview();
 private:
 	int cnt1 = 0;
 	int num = 0;

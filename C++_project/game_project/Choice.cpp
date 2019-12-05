@@ -1,27 +1,27 @@
 
 #include"Choice.h"
 Game_Play *gp = new Game_Play();
-void writereview() {
-
-	system("cls");
-	int key=0;
-	gotoxy(15, 13);
-	cout << "게임 개발자에게 남기는 한마디 : ";
-	FILE* review;
-	fopen_s(&review, "review.txt", "w");
-	string write;
-	getline(cin, write);
-	char *c = new char[write.length() + 1];
-	strcpy(c, write.c_str());
-	fputs(c, review);
-	delete[] c;
-	fclose(review);
-	//gotoxy(20, 37);
-	
-		readreview();
-	
-	//return name;
-}
+//void writereview() {
+//
+//	system("cls");
+//	int key=0;
+//	gotoxy(15, 13);
+//	cout << "게임 개발자에게 남기는 한마디 : ";
+//	FILE* review;
+//	fopen_s(&review, "review.txt", "w");
+//	string write;
+//	getline(cin, write);
+//	char *c = new char[write.length() + 1];
+//	strcpy(c, write.c_str());
+//	fputs(c, review);
+//	delete[] c;
+//	fclose(review);
+//	//gotoxy(20, 37);
+//	
+//		readreview();
+//	
+//	//return name;
+//}
 void readreview() {
 	int key=0;
 	system("cls");
@@ -139,8 +139,7 @@ void title_change() {
 		title();
 		int title_menucode = title_menuchoice();
 		if (title_menucode == 0) {//게임 시작
-			//gp->game_screen();
-			gp->ending3();
+			gp->game_screen();
 		}
 		if (title_menucode == 2) {//게임 방법
 			gamerule();
@@ -151,7 +150,7 @@ void title_change() {
 		}
 		if (title_menucode == 6) {//랭킹보기
 			system("cls");
-			writereview();
+			readreview();
 		}
 		if (title_menucode == 8) {//랭킹보기
 			exit(0);
@@ -249,7 +248,7 @@ void gamerule()
 	gotoxy(30, 16);
 	cout << "3. 1개의 음으로 이루어진 5개의 비밀번호를 맞추면 1단계 성공!" << endl;
 	gotoxy(30, 18);
-	cout << "4. 2개의 음으로 이루어진 5개의 비밀번호를 맞추면 1단계 성공!" << endl;
+	cout << "4. 2개의 음으로 이루어진 5개의 비밀번호를 맞추면 2단계 성공!" << endl;
 	gotoxy(30, 20);
 	cout << "5. 3개의 음으로 이루어진 3개의 비밀번호를 맞추면 3단계 성공!" << endl;
 	gotoxy(30, 22);
@@ -323,7 +322,7 @@ void intro3() {
 	gotoxy(18, 8);
 	cout << "내 제안은 바로 미림여자정보과학고등학교의 서버를 해킹하라는거다. " << endl;
 	gotoxy(18, 10);
-	cout << "정확히 말하자면"<<t->tm_mon+1<<"월 "<< t->tm_mday<<"수행 시험날 이지. " << endl;
+	cout << "정확히 말하자면 "<<t->tm_mon+1<<"월 "<< t->tm_mday<<"일, 바로 수행 시험날 이지. " << endl;
 	gotoxy(18, 12);
 	cout << "모든 학생들이 시험을 보지 못하도록 해킹해주기만 하면 된다." << endl;
 	gotoxy(18, 14);
