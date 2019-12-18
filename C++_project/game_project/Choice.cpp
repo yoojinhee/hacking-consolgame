@@ -139,14 +139,19 @@ void title_change() {
 		title();
 		int title_menucode = title_menuchoice();
 		if (title_menucode == 0) {//게임 시작
-			gp->game_screen();
+			//gp->game_screen();
+			gp->ending1();
 		}
 		if (title_menucode == 2) {//게임 방법
-			gamerule();
+			//gamerule();
+			gp->ending2();
+
 		}
 		if (title_menucode == 4) {//스토리 보기
-			system("cls");
-			intro1();
+			//system("cls");
+			//intro1();
+			gp->ending3();
+
 		}
 		if (title_menucode == 6) {//랭킹보기
 			system("cls");
